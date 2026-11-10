@@ -1,13 +1,14 @@
 {
-  "name": "gitswitch",
+  "name": "github-switch",
   "version": "1.0.0",
-  "description": "Switch effortlessly between multiple GitHub and Git user profiles with simple commands.",
+  "description": "Switch effortlessly between multiple GitHub and Git accounts with automatic Windows Credential Manager caching.",
   "type": "module",
   "main": "src/index.js",
   "bin": {
-    "github": "./bin/gitswitch.js",
-    "gitswitch": "./bin/gitswitch.js",
-    "git-switch": "./bin/gitswitch.js"
+    "github": "bin/gitswitch.js",
+    "gitswitch": "bin/gitswitch.js",
+    "git-switch": "bin/gitswitch.js",
+    "github-switch": "bin/gitswitch.js"
   },
   "files": [
     "bin",
@@ -25,12 +26,14 @@
     "github",
     "git-switch",
     "gitswitch",
+    "github-switch",
     "account-switcher",
     "multi-account",
     "git-config",
+    "credential-manager",
     "cli"
   ],
-  "author": "GitSwitch Contributors",
+  "author": "Praveen KR <praveen@bytecamp.com>",
   "license": "MIT",
   "dependencies": {
     "@inquirer/prompts": "^8.7.5",
