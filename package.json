@@ -1,0 +1,47 @@
+{
+  "name": "gitswitch",
+  "version": "1.0.0",
+  "description": "Switch effortlessly between multiple GitHub and Git user profiles with simple commands.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "github": "./bin/gitswitch.js",
+    "gitswitch": "./bin/gitswitch.js",
+    "git-switch": "./bin/gitswitch.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node ./bin/gitswitch.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "git-switch",
+    "gitswitch",
+    "account-switcher",
+    "multi-account",
+    "git-config",
+    "cli"
+  ],
+  "author": "GitSwitch Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "@inquirer/prompts": "^8.7.5",
+    "cli-table3": "^0.6.5",
+    "commander": "^15.1.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "vitest": "^5.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
