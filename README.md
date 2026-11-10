@@ -1,14 +1,14 @@
-# GitSwitch (`gitswitch`)
+# GitSwitch (`github-switch`)
 
-> 🚀 Effortlessly manage and switch between multiple GitHub and Git accounts from your terminal with a single command — including **automatic Windows Credential Manager caching & switching**.
+> Effortlessly manage and switch between multiple GitHub and Git accounts from your terminal with a single command — including **automatic Windows Credential Manager caching & switching**.
 
-[![npm version](https://img.shields.io/badge/npm-v1.0.0-blue.svg)](https://www.npmjs.com/)
+[![npm version](https://img.shields.io/badge/npm-v1.0.0-blue.svg)](https://www.npmjs.com/package/github-switch)
 [![license](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)]()
 
 ---
 
-## 🌟 Features
+## Features
 
 - **Multi-Account Git Config**: Switch `git config user.name` and `user.email` instantly.
 - **Windows Credential Manager Integration**:
@@ -18,14 +18,14 @@
 - **Exact Syntax Match**: Supports `-uname`, `-uemail`, `-token`, as well as standard GNU flags.
 - **Interactive Terminal UI**: Run `github switch` without arguments for an interactive picker.
 - **Security-First**: Tokens are stored privately in `~/.gitswitch/credentials.json` with restricted permissions and masked in CLI outputs.
-- **Command Aliases**: Registered under `github`, `gitswitch`, and `git-switch`.
+- **Command Aliases**: Registered under `github`, `gitswitch`, `git-switch`, and `github-switch`.
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
-npm install -g gitswitch
+npm install -g github-switch
 ```
 
 Or clone and link locally:
@@ -37,7 +37,7 @@ npm link
 
 ---
 
-## 🔐 How Credential Caching & Switching Works
+## How Credential Caching & Switching Works
 
 When you push or pull over HTTPS, Git Credential Manager stores your GitHub login in Windows Credential Manager under:
 ```text
@@ -66,7 +66,7 @@ When you switch back to Account A (`github switch "Account A"`):
 
 ---
 
-## 💻 CLI Commands
+## CLI Commands
 
 ### 1. View all saved accounts
 
@@ -82,9 +82,9 @@ Registered GitHub Accounts:
 ┌──────────────┬───────────────┬───────────────────┬─────────────┬─────────┬──────────────┐
 │ Status       │ Username      │ Email             │ Credentials │ SSH Key │ Added / Used │
 ├──────────────┼───────────────┼───────────────────┼─────────────┼─────────┼──────────────┤
-│ ● Active     │ bytecamp-in   │ dev@bytecamp.in   │ ✔ Cached    │ none    │ used today   │
+│ Active       │ bytecamp-in   │ dev@bytecamp.in   │ Cached      │ none    │ used today   │
 ├──────────────┼───────────────┼───────────────────┼─────────────┼─────────┼──────────────┤
-│ -            │ personal-dev  │ me@gmail.com      │ ✔ Cached    │ none    │ added 9/11   │
+│ -            │ personal-dev  │ me@gmail.com      │ Cached      │ none    │ added 9/11   │
 └──────────────┴───────────────┴───────────────────┴─────────────┴─────────┴──────────────┘
 ```
 
@@ -112,10 +112,10 @@ github switch "email@example.com"
 
 Output:
 ```text
-ℹ Cached active credential for bytecamp-in
-ℹ Cleared Windows Credential Manager: cmdkey /delete:LegacyGeneric:target=git:https://github.com
-✔ Switched to GitHub account: personal-dev <me@gmail.com> [global]
-✔ Restored cached credentials for personal-dev into Windows Credential Manager
+[info] Cached active credential for bytecamp-in
+[info] Cleared Windows Credential Manager: cmdkey /delete:LegacyGeneric:target=git:https://github.com
+[ok] Switched to GitHub account: personal-dev <me@gmail.com> [global]
+[ok] Restored cached credentials for personal-dev into Windows Credential Manager
 ```
 
 *Options:*
@@ -171,7 +171,7 @@ github cred clear
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 npm test
@@ -185,6 +185,6 @@ All 21 unit and integration tests run via Vitest:
 
 ---
 
-## 📄 License
+## License
 
 [MIT](LICENSE) © 2026 GitSwitch Contributors
